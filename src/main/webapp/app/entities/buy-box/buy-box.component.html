@@ -1,0 +1,69 @@
+<div>
+    <h2 id="page-heading">
+        <span>Buy Boxes</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-buy-box" [routerLink]="['/buy-box/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create a new Buy Box
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="buyBoxes?.length === 0">
+        <span>No buyBoxes found</span>
+    </div>
+    <div class="table-responsive" *ngIf="buyBoxes?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isPreOrder"><span>Is Pre Order</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="promitionQty"><span>Promition Qty</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="productId"><span>Product Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="addToCartText"><span>Add To Cart Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="productLineId"><span>Product Line Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isAddToWishListAvailable"><span>Is Add To Wish List Available</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isDigital"><span>Is Digital</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let buyBox of buyBoxes ;trackBy: trackId">
+                <td><a [routerLink]="['/buy-box', buyBox.id, 'view' ]">{{buyBox.id}}</a></td>
+                <td>{{buyBox.isPreOrder}}</td>
+                <td>{{buyBox.promitionQty}}</td>
+                <td>{{buyBox.productId}}</td>
+                <td>{{buyBox.addToCartText}}</td>
+                <td>{{buyBox.productLineId | date:'medium'}}</td>
+                <td>{{buyBox.isAddToWishListAvailable}}</td>
+                <td>{{buyBox.isDigital}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/buy-box', buyBox.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/buy-box', buyBox.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/buy-box', { outlets: { popup: buyBox.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

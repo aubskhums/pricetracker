@@ -1,0 +1,43 @@
+{
+    "name": "BuyBox",
+    "fields": [
+        {
+            "fieldName": "isPreOrder",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "promitionQty",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "productId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "addToCartText",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productLineId",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "isAddToWishListAvailable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isDigital",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190820210701",
+    "entityTableName": "buy_box",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

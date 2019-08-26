@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-buy-box-heading">Create or edit a Buy Box</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isPreOrder">Is Pre Order</label>
+                    <input type="checkbox" class="form-control" name="isPreOrder" id="field_isPreOrder"
+                           formControlName="isPreOrder"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_promitionQty">Promition Qty</label>
+                    <input type="number" class="form-control" name="promitionQty" id="field_promitionQty"
+                           formControlName="promitionQty"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_productId">Product Id</label>
+                    <input type="number" class="form-control" name="productId" id="field_productId"
+                           formControlName="productId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_addToCartText">Add To Cart Text</label>
+                    <input type="text" class="form-control" name="addToCartText" id="field_addToCartText"
+                           formControlName="addToCartText"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_productLineId">Product Line Id</label>
+                    <div class="d-flex">
+                        <input id="field_productLineId" type="datetime-local" class="form-control" name="productLineId" formControlName="productLineId" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isAddToWishListAvailable">Is Add To Wish List Available</label>
+                    <input type="checkbox" class="form-control" name="isAddToWishListAvailable" id="field_isAddToWishListAvailable"
+                           formControlName="isAddToWishListAvailable"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isDigital">Is Digital</label>
+                    <input type="checkbox" class="form-control" name="isDigital" id="field_isDigital"
+                           formControlName="isDigital"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

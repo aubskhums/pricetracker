@@ -1,0 +1,35 @@
+{
+  "is_preorder": false,
+  "delivery_charges": {},
+  "promotion_qty": null,
+  "product_id": 32105913,
+  "add_to_cart_text": "Add to Cart",
+  "loyalty_prices": [
+    {
+      "display_text": "eB84,890",
+      "prices": [84890],
+      "info_mode": null,
+      "id": "loyaltyprices-0",
+      "description": null
+    },
+    {
+      "display_text": "On Credit: R789 / month",
+      "prices": [789.0],
+      "info_mode": "long",
+      "id": "loyaltyprices-2",
+      "info_text": "## Can I buy this on credit?\n\nYes. If you pay with Mobicred, you can repay the full amount in monthly instalments, instead of all at once.\n\nThe On Credit amount shown is based on 12 monthly repayments (including interest charged at 20.5%* per year and excluding Mobicred's set-up and service fees).\n\nOnce you have a Mobicred account, simply select Mobicred as your payment option when you checkout.\n\n### Don't have a Mobicred account yet?\n\nBefore you add an item to your cart, you'll need to apply for a Mobicred account via the Mobicred website.\n\n### Please note:\n\nYour Mobicred application will be processed in 1 business day once all required documents have been submitted.\n\n[Apply to Mobicred now](https://www.mobicred.co.za/register/?merchantID=1575)\n\n\\* Annual interest subject to change"
+    }
+  ],
+  "product_line_id": 30765949,
+  "is_add_to_wishlist_available": true,
+  "variants_call_to_action": null,
+  "multibuy_label": null,
+  "is_digital": false,
+  "is_free_shipping_available": true,
+  "multibuy_display": false,
+  "is_add_to_cart_available": false,
+  "prices": [8489.0],
+  "pretty_price": "R 8,489",
+  "listing_price": null,
+  "promotion_qty_display_text": null
+}

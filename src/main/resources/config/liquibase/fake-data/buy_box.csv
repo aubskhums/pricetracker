@@ -1,0 +1,11 @@
+id;is_pre_order;promition_qty;product_id;add_to_cart_text;product_line_id;is_add_to_wish_list_available;is_digital
+1;false;79654;95071;application;2019-08-20T06:45:03;true;false
+2;false;15599;9997;Trace;2019-08-20T13:06:35;true;false
+3;true;65088;2058;Producer;2019-08-20T01:08:25;true;false
+4;false;18182;99221;Money Market Account;2019-08-20T06:26:21;true;false
+5;false;2306;29122;Investment Account Steel;2019-08-20T14:06:26;true;false
+6;false;45606;9060;Savings Account syndicate Planner;2019-08-20T09:54:59;false;true
+7;true;68030;17052;Small Frozen Sausages Planner;2019-08-20T01:43:02;false;false
+8;false;9767;23089;Monitored Bahamian Dollar Investment Account;2019-08-20T01:07:20;false;false
+9;true;39106;25877;invoice;2019-08-20T13:38:15;false;true
+10;false;54671;56770;Industrial;2019-08-20T00:54:14;true;false

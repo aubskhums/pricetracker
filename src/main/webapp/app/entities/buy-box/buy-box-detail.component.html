@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="buyBox">
+            <h2><span>Buy Box</span> {{buyBox.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Is Pre Order</span></dt>
+                <dd>
+                    <span>{{buyBox.isPreOrder}}</span>
+                </dd>
+                <dt><span>Promition Qty</span></dt>
+                <dd>
+                    <span>{{buyBox.promitionQty}}</span>
+                </dd>
+                <dt><span>Product Id</span></dt>
+                <dd>
+                    <span>{{buyBox.productId}}</span>
+                </dd>
+                <dt><span>Add To Cart Text</span></dt>
+                <dd>
+                    <span>{{buyBox.addToCartText}}</span>
+                </dd>
+                <dt><span>Product Line Id</span></dt>
+                <dd>
+                    <span>{{buyBox.productLineId}}</span>
+                </dd>
+                <dt><span>Is Add To Wish List Available</span></dt>
+                <dd>
+                    <span>{{buyBox.isAddToWishListAvailable}}</span>
+                </dd>
+                <dt><span>Is Digital</span></dt>
+                <dd>
+                    <span>{{buyBox.isDigital}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/buy-box', buyBox.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
